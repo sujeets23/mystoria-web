@@ -8,6 +8,13 @@ export default {
     extend: {
       colors: {
         void: '#050505',
+        background: '#050505',
+        foreground: '#FFFFFF',
+        'muted-foreground': '#888888',
+        primary: {
+          DEFAULT: '#E1E0CC',
+          foreground: '#050505',
+        },
         surface: {
           DEFAULT: '#0A0A0A',
           card: '#0E0E0E',

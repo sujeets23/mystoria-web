@@ -1,5 +1,5 @@
 import React from 'react';
-import { Hero } from '../components/Hero';
+import { PrismaHero } from '@/components/ui/prisma-hero';
 import { Marquee } from '../components/Marquee';
 import { AboutSection } from '../components/AboutSection';
 import { Services } from '../components/Services';
@@ -8,12 +8,13 @@ import { Process } from '../components/Process';
 import { WhyMystoria } from '../components/WhyMystoria';
 import { Stats } from '../components/Stats';
 import { Testimonials } from '../components/Testimonials';
+import { WhereWeWorked } from '../components/WhereWeWorked';
 import { CTA } from '../components/CTA';
 
 export const Home: React.FC = () => {
   return (
     <main className="relative">
-      <Hero />
+      <PrismaHero />
       <Marquee />
       <AboutSection />
       <Services />
@@ -23,6 +24,9 @@ export const Home: React.FC = () => {
       <Stats />
       <Testimonials />
       <CTA />
+      <WhereWeWorked />
     </main>
   );
 };
+
+export default Home;

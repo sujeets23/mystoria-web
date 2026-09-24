@@ -41,20 +41,26 @@ export const Navbar: React.FC = () => {
     { name: 'Contact', path: '/contact' },
   ];
 
+  const isHome = location.pathname === '/';
+
   return (
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
           isScrolled
             ? 'py-4 bg-[#050505]/85 backdrop-blur-md border-b border-white/[0.07] shadow-[0_10px_30px_rgba(0,0,0,0.8)]'
+            : isHome
+            ? 'py-6 md:py-8 bg-transparent border-b border-transparent pointer-events-none'
             : 'py-6 md:py-8 bg-transparent border-b border-transparent'
         }`}
       >
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex items-center justify-between">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex items-center justify-between pointer-events-auto">
           {/* Logo */}
           <Link
             to="/"
-            className="group flex items-center gap-1.5 focus:outline-none focus-visible:ring-1 focus-visible:ring-crimson"
+            className={`group flex items-center gap-1.5 focus:outline-none focus-visible:ring-1 focus-visible:ring-crimson transition-opacity duration-300 ${
+              isHome && !isScrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'
+            }`}
           >
             <span className="font-display text-xl md:text-2xl font-bold tracking-tight text-white transition-colors duration-300 group-hover:text-white">
               MYSTORIA
@@ -63,7 +69,11 @@ export const Navbar: React.FC = () => {
           </Link>
 
           {/* Desktop Nav Links */}
-          <nav className="hidden md:flex items-center gap-8 lg:gap-10">
+          <nav
+            className={`hidden md:flex items-center gap-8 lg:gap-10 transition-opacity duration-300 ${
+              isHome && !isScrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'
+            }`}
+          >
             {navLinks.map((link) => {
               const isActive = location.pathname === link.path;
               return (
@@ -86,7 +96,11 @@ export const Navbar: React.FC = () => {
           </nav>
 
           {/* Desktop Action Button */}
-          <div className="hidden md:flex items-center">
+          <div
+            className={`hidden md:flex items-center transition-opacity duration-300 ${
+              isHome && !isScrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'
+            }`}
+          >
             <Link
               to="/contact"
               data-cursor="cta"
@@ -101,7 +115,9 @@ export const Navbar: React.FC = () => {
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle navigation menu"
-            className="md:hidden p-2 text-neutral-300 hover:text-white focus:outline-none"
+            className={`md:hidden p-2 text-neutral-300 hover:text-white focus:outline-none transition-opacity duration-300 ${
+              isHome && !isScrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'
+            }`}
           >
             {mobileMenuOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}
           </button>

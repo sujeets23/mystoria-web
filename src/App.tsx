@@ -5,6 +5,7 @@ import { CustomCursor } from './components/CustomCursor';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { ScrollToTop } from './utils/ScrollToTop';
+import { SmoothScroll } from './components/SmoothScroll';
 
 import { Home } from './pages/Home';
 import { Work } from './pages/Work';
@@ -16,9 +17,10 @@ import { Contact } from './pages/Contact';
 export const App: React.FC = () => {
   return (
     <Router>
-      <div className="relative min-h-screen bg-[#050505] text-[#E5E5E5] flex flex-col selection:bg-crimson selection:text-white">
-        {/* Subtle noise grain texture */}
-        <GrainOverlay />
+      <SmoothScroll>
+        <div className="relative min-h-screen bg-[#050505] text-[#E5E5E5] flex flex-col selection:bg-crimson selection:text-white">
+          {/* Subtle noise grain texture */}
+          <GrainOverlay />
 
         {/* Custom cursor for desktop */}
         <CustomCursor />
@@ -45,8 +47,9 @@ export const App: React.FC = () => {
         {/* Global studio footer */}
         <Footer />
       </div>
-    </Router>
-  );
+    </SmoothScroll>
+  </Router>
+);
 };
 
 export default App;
