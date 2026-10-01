@@ -227,7 +227,7 @@ const PrismaHero = () => {
                 }}
                 className="text-xs text-neutral-300 sm:text-sm md:text-base font-light leading-relaxed max-w-lg"
               >
-                Mystoria is an independent creative studio building distinctive brands, visual systems and digital experiences for ambitious businesses that refuse to compromise.
+                Mystoria is a growth studio and a partner for every company with vision. We engineer data-obsessed performance marketing, creator ecosystems, SEO dominance, and cinematic ad production for brands ready to scale.
               </motion.p>
 
               <motion.div

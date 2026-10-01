@@ -58,7 +58,7 @@ export const WhyMystoria: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.45 }}
           className="mt-10 sm:mt-14 max-w-2xl text-base sm:text-xl text-neutral-300 font-light leading-relaxed text-center"
         >
-          We believe good digital work should have a point of view. Every project is designed around its own story, audience and ambition. When you work with us, you get our complete obsession.
+          We believe compounding growth demands an unmistakable point of view. As a dedicated growth studio and a partner for every company with vision, we eliminate vanity metrics and empty buzzwords to build enduring category leaders.
         </motion.p>
       </div>
     </section>

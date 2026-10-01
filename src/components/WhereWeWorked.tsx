@@ -27,6 +27,18 @@ interface CityHub {
 
 const GLOBAL_HUBS: CityHub[] = [
   {
+    id: 'mumbai',
+    name: 'Mumbai',
+    country: 'India',
+    region: 'Asia-Pacific',
+    location: [19.0760, 72.8777],
+    flagship: 'Mystoria Global Headquarters & Studio',
+    clientType: 'Growth Studio HQ & Operations',
+    year: '2021 - Present',
+    status: 'Global Headquarters',
+    image: 'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?q=80&w=800&auto=format&fit=crop',
+  },
+  {
     id: 'nyc',
     name: 'New York',
     country: 'United States',
@@ -167,15 +179,16 @@ const GLOBE_MARKERS = GLOBAL_HUBS.map(hub => ({
 }));
 
 const GLOBE_ARCS = [
+  { id: 'mumbai-london', from: [19.0760, 72.8777] as [number, number], to: [51.5074, -0.1278] as [number, number], label: 'Mumbai (HQ) ↔ London' },
+  { id: 'mumbai-nyc', from: [19.0760, 72.8777] as [number, number], to: [40.7128, -74.006] as [number, number], label: 'Mumbai (HQ) ↔ NYC' },
+  { id: 'mumbai-dubai', from: [19.0760, 72.8777] as [number, number], to: [25.2048, 55.2708] as [number, number], label: 'Mumbai (HQ) ↔ Dubai' },
+  { id: 'mumbai-singapore', from: [19.0760, 72.8777] as [number, number], to: [1.3521, 103.8198] as [number, number], label: 'Mumbai (HQ) ↔ Singapore' },
   { id: 'nyc-london', from: [40.7128, -74.006] as [number, number], to: [51.5074, -0.1278] as [number, number], label: 'NYC ↔ London' },
   { id: 'london-zurich', from: [51.5074, -0.1278] as [number, number], to: [47.3769, 8.5417] as [number, number] },
   { id: 'sf-tokyo', from: [37.7595, -122.4367] as [number, number], to: [35.6762, 139.6503] as [number, number], label: 'SF ↔ Tokyo' },
-  { id: 'london-dubai', from: [51.5074, -0.1278] as [number, number], to: [25.2048, 55.2708] as [number, number] },
   { id: 'dubai-singapore', from: [25.2048, 55.2708] as [number, number], to: [1.3521, 103.8198] as [number, number] },
   { id: 'singapore-tokyo', from: [1.3521, 103.8198] as [number, number], to: [35.6762, 139.6503] as [number, number] },
   { id: 'tokyo-sydney', from: [35.6762, 139.6503] as [number, number], to: [-33.8688, 151.2093] as [number, number] },
-  { id: 'nyc-saopaulo', from: [40.7128, -74.006] as [number, number], to: [-23.5505, -46.6333] as [number, number] },
-  { id: 'paris-nyc', from: [48.8566, 2.3522] as [number, number], to: [40.7128, -74.006] as [number, number] },
 ];
 
 export const WhereWeWorked: React.FC = () => {

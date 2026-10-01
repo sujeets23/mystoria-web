@@ -1,21 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUp, ArrowUpRight } from 'lucide-react';
+import { TextRollLink } from '@/components/ui/text-roll-link';
 
 export const Footer: React.FC = () => {
   const [times, setTimes] = useState({
-    nyc: '',
+    mumbai: '',
     london: '',
-    tokyo: '',
+    nyc: '',
   });
 
   useEffect(() => {
     const updateClocks = () => {
       const now = new Date();
       setTimes({
-        nyc: now.toLocaleTimeString('en-US', { timeZone: 'America/New_York', hour: '2-digit', minute: '2-digit', hour12: false }),
+        mumbai: now.toLocaleTimeString('en-IN', { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', hour12: false }),
         london: now.toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hour12: false }),
-        tokyo: now.toLocaleTimeString('ja-JP', { timeZone: 'Asia/Tokyo', hour: '2-digit', minute: '2-digit', hour12: false }),
+        nyc: now.toLocaleTimeString('en-US', { timeZone: 'America/New_York', hour: '2-digit', minute: '2-digit', hour12: false }),
       });
     };
 
@@ -48,23 +49,26 @@ export const Footer: React.FC = () => {
                 <span className="w-2 h-2 rounded-full bg-crimson shadow-[0_0_10px_#DC2626]" />
               </Link>
               <p className="max-w-sm text-sm sm:text-base text-neutral-400 font-light leading-relaxed">
-                Creative studio for brands that want to be remembered. We engineer identities and digital flagships with uncompromising gravity.
+                Growth studio and a dedicated partner for every company with vision. We engineer data-driven performance marketing, creator ecosystems, search dominance, and cinematic ad production.
               </p>
             </div>
 
             {/* Studio Time Zones */}
             <div className="mt-10 pt-6 border-t border-white/[0.06] grid grid-cols-3 gap-4 text-xs font-mono">
               <div>
-                <div className="text-neutral-500 uppercase">NEW YORK</div>
-                <div className="text-white mt-1">{times.nyc || '12:00'} EST</div>
+                <div className="text-crimson font-semibold uppercase flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-crimson" />
+                  MUMBAI (HQ)
+                </div>
+                <div className="text-white mt-1">{times.mumbai || '17:30'} IST</div>
               </div>
               <div>
                 <div className="text-neutral-500 uppercase">LONDON</div>
-                <div className="text-white mt-1">{times.london || '17:00'} GMT</div>
+                <div className="text-white mt-1">{times.london || '12:00'} GMT</div>
               </div>
               <div>
-                <div className="text-neutral-500 uppercase">TOKYO</div>
-                <div className="text-white mt-1">{times.tokyo || '02:00'} JST</div>
+                <div className="text-neutral-500 uppercase">NEW YORK</div>
+                <div className="text-white mt-1">{times.nyc || '07:00'} EST</div>
               </div>
             </div>
           </div>
@@ -82,12 +86,12 @@ export const Footer: React.FC = () => {
                 { name: 'Contact', path: '/contact' },
               ].map((item) => (
                 <li key={item.name}>
-                  <Link
+                  <TextRollLink
                     to={item.path}
-                    className="text-base text-neutral-300 hover:text-white hover:translate-x-1 inline-block transition-all duration-200"
+                    className="text-base text-neutral-300 hover:text-white inline-block transition-colors duration-200"
                   >
                     {item.name}
-                  </Link>
+                  </TextRollLink>
                 </li>
               ))}
             </ul>
@@ -107,15 +111,17 @@ export const Footer: React.FC = () => {
                   { name: 'X / Twitter', url: 'https://x.com' },
                 ].map((social) => (
                   <li key={social.name}>
-                    <a
+                    <TextRollLink
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group inline-flex items-center gap-1.5 text-neutral-300 hover:text-white transition-colors"
+                      suffix={
+                        <ArrowUpRight className="w-3.5 h-3.5 text-neutral-500 group-hover:text-crimson group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                      }
                     >
-                      <span>{social.name}</span>
-                      <ArrowUpRight className="w-3.5 h-3.5 text-neutral-500 group-hover:text-crimson group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
-                    </a>
+                      {social.name}
+                    </TextRollLink>
                   </li>
                 ))}
               </ul>
@@ -142,7 +148,7 @@ export const Footer: React.FC = () => {
           </div>
 
           <div className="text-center text-neutral-400">
-            Designed & developed with intention.
+            Designed &amp; developed in Mumbai, India.
           </div>
 
           <button

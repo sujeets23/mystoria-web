@@ -37,9 +37,9 @@ export const AboutSection: React.FC = () => {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="text-3xl sm:text-5xl md:text-6xl lg:text-[4.2rem] font-display font-bold uppercase tracking-tight text-white leading-[1.08]"
           >
-            WE BUILD BRANDS AND DIGITAL EXPERIENCES THAT{' '}
+            A GROWTH STUDIO AND A PARTNER FOR EVERY COMPANY WITH{' '}
             <span className="text-crimson underline decoration-crimson/40 underline-offset-8">
-              REFUSE TO BLEND IN.
+              VISION.
             </span>
           </motion.h2>
 
@@ -51,7 +51,7 @@ export const AboutSection: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="md:col-span-8 text-lg sm:text-xl text-neutral-400 font-light leading-relaxed"
             >
-              Mystoria is a creative studio focused on building distinctive identities, digital experiences and visual systems for brands with something worth saying. We eliminate the generic, the templated, and the derivative in favor of work with genuine gravity.
+              Mystoria is a growth studio built for companies with bold vision. We eliminate vanity metrics, sluggish agency loops, and generic playbooks in favor of compounding growth engines, creator-led virality, search dominance, and cinematic ad production that command undeniable market gravity.
             </motion.p>
 
             <motion.div
@@ -63,8 +63,8 @@ export const AboutSection: React.FC = () => {
             >
               <div className="text-xs font-mono text-neutral-500 uppercase tracking-widest leading-loose">
                 <div>EST. 2021</div>
-                <div>NEW YORK × TOKYO</div>
-                <div>INDEPENDENT & PRIVATELY HELD</div>
+                <div className="text-white font-bold">MUMBAI, INDIA</div>
+                <div>GROWTH STUDIO // GLOBAL REACH</div>
               </div>
 
               <Link

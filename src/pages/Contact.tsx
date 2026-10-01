@@ -17,12 +17,12 @@ export const Contact: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const projectTypes = [
-    'Branding',
-    'Website',
-    'UI/UX',
-    'Motion',
-    'Creative Campaign',
-    'Other',
+    'SEO',
+    'Influencer Marketing',
+    'Performance Marketing',
+    'Production and Ads',
+    'Social Media Management',
+    'Full-Funnel Growth',
   ];
 
   const budgetTiers = [
@@ -72,17 +72,17 @@ export const Contact: React.FC = () => {
           <div className="inline-flex items-center gap-2 mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-crimson" />
             <span className="text-xs font-mono tracking-[0.25em] text-neutral-400 uppercase">
-              COMMISSIONS &amp; PARTNERSHIPS
+              GROWTH PARTNERSHIPS
             </span>
           </div>
 
           <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[4.8rem] font-display font-extrabold uppercase tracking-tight text-white max-w-5xl leading-[1.02]">
-            LET'S CREATE SOMETHING{' '}
-            <span className="text-crimson">WORTH REMEMBERING.</span>
+            A PARTNER FOR EVERY{' '}
+            <span className="text-crimson">COMPANY WITH VISION.</span>
           </h1>
 
           <p className="mt-8 max-w-2xl text-base sm:text-xl text-neutral-400 font-light leading-relaxed">
-            We are currently accepting selective brand and digital projects for 2026. Fill out the project brief below and our directors will respond within 24 hours.
+            Ready to unlock exponential category growth? Tell us about your vision below and our growth directors will respond within 24 hours.
           </p>
         </div>
 
@@ -110,24 +110,25 @@ export const Contact: React.FC = () => {
 
             <div className="pt-8 border-t border-white/[0.08] space-y-6">
               <div>
-                <span className="text-xs font-mono text-neutral-500 uppercase tracking-widest block mb-1">
-                  NEW YORK STUDIO
+                <span className="text-xs font-mono text-crimson uppercase tracking-widest block mb-1">
+                  STUDIO HEADQUARTERS
                 </span>
-                <span className="text-sm text-neutral-300">540 W 26th St, Chelsea, NY 10001</span>
+                <span className="text-sm text-white font-medium block">Mumbai, Maharashtra, India</span>
+                <span className="text-xs text-neutral-400 mt-0.5 block">Bandra Kurla Complex (BKC), Mumbai 400051</span>
               </div>
 
               <div>
                 <span className="text-xs font-mono text-neutral-500 uppercase tracking-widest block mb-1">
-                  TOKYO STUDIO
+                  GLOBAL CLIENT PARTNERSHIPS
                 </span>
-                <span className="text-sm text-neutral-300">Minami-Aoyama, Minato-ku, Tokyo 107-0062</span>
+                <span className="text-sm text-neutral-300">Serving high-vision brands across India, US, Europe &amp; APAC</span>
               </div>
 
               <div>
                 <span className="text-xs font-mono text-neutral-500 uppercase tracking-widest block mb-1">
                   RESPONSE TIME
                 </span>
-                <span className="text-sm text-neutral-300">Under 24 hours, Monday – Friday</span>
+                <span className="text-sm text-neutral-300">Under 24 hours (IST / Worldwide)</span>
               </div>
             </div>
 

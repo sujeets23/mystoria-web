@@ -47,12 +47,10 @@ export const Hero: React.FC = () => {
             AVAILABLE FOR SELECT COMMISSIONS — 2026
           </span>
         </div>
-        <div className="hidden sm:flex items-center gap-6 text-[11px] tracking-wider text-neutral-500 uppercase">
-          <span>PARIS</span>
+        <div className="hidden sm:flex items-center gap-3 text-[11px] tracking-wider text-neutral-400 uppercase font-mono">
+          <span className="text-white font-bold">MUMBAI (HQ)</span>
           <span className="text-crimson/50">•</span>
-          <span>NEW YORK</span>
-          <span className="text-crimson/50">•</span>
-          <span>TOKYO</span>
+          <span>GLOBAL REACH</span>
         </div>
       </motion.div>
 
@@ -65,7 +63,7 @@ export const Hero: React.FC = () => {
           className="mb-4 inline-flex items-center gap-2"
         >
           <span className="px-3 py-1 rounded-full text-[11px] font-mono tracking-[0.2em] uppercase text-neutral-300 bg-white/[0.04] border border-white/[0.08]">
-            INDEPENDENT CREATIVE STUDIO
+            GROWTH STUDIO — PARTNER FOR COMPANIES WITH VISION
           </span>
         </motion.div>
 
@@ -89,7 +87,7 @@ export const Hero: React.FC = () => {
               transition={{ duration: 1, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
               className="text-4xl sm:text-6xl md:text-7xl lg:text-[5.75rem] font-display font-extrabold uppercase tracking-tighter text-white leading-[0.92]"
             >
-              EXPERIENCES
+              GROWTH ENGINES
             </motion.h1>
             <motion.span
               initial={{ scale: 0, opacity: 0 }}
@@ -108,7 +106,7 @@ export const Hero: React.FC = () => {
               transition={{ duration: 1, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
               className="text-4xl sm:text-6xl md:text-7xl lg:text-[5.75rem] font-display font-extrabold uppercase tracking-tighter leading-[0.92] text-transparent bg-clip-text bg-gradient-to-r from-white via-neutral-200 to-neutral-500"
             >
-              THAT MATTER.
+              THAT SCALE.
             </motion.h1>
           </div>
         </div>
@@ -121,7 +119,7 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.9 }}
             className="md:col-span-6 lg:col-span-5 text-base md:text-lg text-neutral-400 font-light leading-relaxed"
           >
-            An independent creative studio building brands, digital experiences and visual systems for ambitious businesses that refuse to compromise.
+            A growth studio and a partner for every company with vision. We build high-impact performance marketing, creator ecosystems, SEO dominance, and cinematic commercial assets for ambitious businesses that refuse to compromise.
           </motion.p>
 
           <motion.div
@@ -164,13 +162,13 @@ export const Hero: React.FC = () => {
 
         <div className="hidden sm:flex items-center gap-8">
           <div>
-            <span className="text-white font-display font-bold">AWWWARDS</span> SOTD × 4
+            <span className="text-white font-display font-bold">BASE</span> MUMBAI, INDIA
           </div>
           <div>
-            <span className="text-white font-display font-bold">FWA</span> OF THE MONTH × 2
+            <span className="text-white font-display font-bold">FRAMEWORK</span> FULL-FUNNEL
           </div>
           <div>
-            <span className="text-white font-display font-bold">RED DOT</span> BEST OF BEST
+            <span className="text-white font-display font-bold">SCALE</span> GLOBAL
           </div>
         </div>
       </motion.div>

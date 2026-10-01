@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
+import { TextRollLink } from '@/components/ui/text-roll-link';
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -77,20 +78,22 @@ export const Navbar: React.FC = () => {
             {navLinks.map((link) => {
               const isActive = location.pathname === link.path;
               return (
-                <Link
+                <TextRollLink
                   key={link.name}
                   to={link.path}
                   className="relative py-1 text-sm font-medium tracking-wide text-neutral-400 hover:text-white transition-colors duration-200"
+                  suffix={
+                    isActive ? (
+                      <motion.span
+                        layoutId="activeNavIndicator"
+                        className="absolute -bottom-1 left-0 right-0 h-[2px] bg-crimson shadow-[0_0_8px_#DC2626]"
+                        transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                      />
+                    ) : null
+                  }
                 >
-                  <span>{link.name}</span>
-                  {isActive && (
-                    <motion.span
-                      layoutId="activeNavIndicator"
-                      className="absolute -bottom-1 left-0 right-0 h-[2px] bg-crimson shadow-[0_0_8px_#DC2626]"
-                      transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-                    />
-                  )}
-                </Link>
+                  {link.name}
+                </TextRollLink>
               );
             })}
           </nav>
@@ -184,7 +187,7 @@ export const Navbar: React.FC = () => {
               </div>
               <div className="flex justify-between items-center text-xs text-neutral-500">
                 <span>HEADQUARTERS</span>
-                <span>NYC / LONDON / TOKYO</span>
+                <span className="text-white font-medium">MUMBAI, INDIA</span>
               </div>
             </div>
           </motion.div>

@@ -27,6 +27,7 @@ export interface Service {
   description: string;
   capabilities: string[];
   tag: string;
+  image?: string;
 }
 
 export interface Testimonial {

@@ -3,6 +3,7 @@
 import { Globe } from "@/components/ui/cobe-globe"
 
 const markers = [
+  { id: "mumbai", location: [19.0760, 72.8777] as [number, number], label: "Mumbai (HQ)" },
   { id: "sf", location: [37.7595, -122.4367] as [number, number], label: "San Francisco" },
   { id: "nyc", location: [40.7128, -74.006] as [number, number], label: "New York" },
   { id: "tokyo", location: [35.6762, 139.6503] as [number, number], label: "Tokyo" },

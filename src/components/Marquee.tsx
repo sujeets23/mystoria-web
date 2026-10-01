@@ -3,14 +3,14 @@ import { motion } from 'framer-motion';
 
 export const Marquee: React.FC = () => {
   const items = [
-    'BRANDING',
-    'WEB DESIGN',
-    'DEVELOPMENT',
-    'MOTION',
-    'DIGITAL EXPERIENCES',
-    'CREATIVE STRATEGY',
-    'ART DIRECTION',
-    'VISUAL SYSTEMS',
+    'GROWTH STUDIO',
+    'SEO DOMINANCE',
+    'INFLUENCER MARKETING',
+    'PERFORMANCE MARKETING',
+    'PRODUCTION AND ADS',
+    'SOCIAL MEDIA MANAGEMENT',
+    'PARTNER FOR COMPANIES WITH VISION',
+    'DATA-DRIVEN SCALE',
   ];
 
   return (

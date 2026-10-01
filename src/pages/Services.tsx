@@ -19,17 +19,17 @@ export const ServicesPage: React.FC = () => {
           <div className="inline-flex items-center gap-2 mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-crimson" />
             <span className="text-xs font-mono tracking-[0.25em] text-neutral-400 uppercase">
-              EXPERTISE &amp; OFFERINGS
+              GROWTH STUDIO CAPABILITIES
             </span>
           </div>
 
           <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[5rem] font-display font-extrabold uppercase tracking-tight text-white max-w-5xl leading-[1.02]">
-            FOUR PRACTICES.{' '}
+            FIVE DISCIPLINES.{' '}
             <span className="text-crimson">ONE VISION.</span>
           </h1>
 
           <p className="mt-8 max-w-3xl text-lg sm:text-2xl text-neutral-300 font-light leading-relaxed">
-            We operate at the convergence of brand strategy, high-precision code, and cinematic art direction. We build end-to-end digital assets engineered to dominate.
+            A partner for every company with vision. We combine algorithmic search dominance, creator-led virality, data-obsessed performance media, cinematic ad production, and narrative social strategy into an unrelenting growth engine.
           </p>
         </div>
 
@@ -42,7 +42,7 @@ export const ServicesPage: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="p-8 sm:p-12 md:p-16 rounded-3xl bg-[#0A0A0A] border border-white/[0.08] hover:border-crimson/40 transition-colors"
+              className="p-8 sm:p-12 md:p-16 rounded-3xl bg-[#0A0A0A] border border-white/[0.08] hover:border-crimson/40 transition-colors group"
             >
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
                 <div className="lg:col-span-5">
@@ -61,9 +61,20 @@ export const ServicesPage: React.FC = () => {
                   <p className="text-lg text-neutral-300 font-medium mb-4">
                     {service.subtitle}
                   </p>
-                  <p className="text-sm sm:text-base text-neutral-400 font-light leading-relaxed">
+                  <p className="text-sm sm:text-base text-neutral-400 font-light leading-relaxed mb-6">
                     {service.description}
                   </p>
+
+                  {service.image && (
+                    <div className="relative rounded-2xl overflow-hidden aspect-[16/9] border border-white/10 group-hover:border-crimson/30 transition-colors">
+                      <img 
+                        src={service.image} 
+                        alt={service.title} 
+                        className="w-full h-full object-cover grayscale contrast-110 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500" 
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+                    </div>
+                  )}
                 </div>
 
                 <div className="lg:col-span-7 pt-6 lg:pt-0 lg:border-l lg:border-white/[0.08] lg:pl-12">

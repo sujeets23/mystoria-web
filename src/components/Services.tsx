@@ -8,13 +8,7 @@ export const Services: React.FC = () => {
     subtitle: service.subtitle,
     category: `${service.number} / ${service.title}`,
     color: '#0E0E0E',
-    src: service.id === 'branding'
-      ? 'https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=1200&q=80'
-      : service.id === 'digital'
-      ? 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=80'
-      : service.id === 'motion'
-      ? 'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1200&q=80'
-      : 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80',
+    src: service.image || 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
     href: '/services',
   }));
 
@@ -23,11 +17,12 @@ export const Services: React.FC = () => {
       <ServicesWithAnimatedHoverModal
         items={hoverItems}
         label="WHAT WE DO"
-        description="Four distinct creative practices engineered to operate synchronously, delivering monolithic brand authority from strategy to production code."
-        badgeText="CAPABILITIES"
+        description="Five disciplined growth practices engineered to scale visionaries — from organic search dominance and data-driven performance media to creator partnerships, cinematic production, and viral social ecosystems."
+        badgeText="GROWTH PRACTICES"
         actionText="Explore"
         className="py-0"
       />
     </section>
   );
 };
+
