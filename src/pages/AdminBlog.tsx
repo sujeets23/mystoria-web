@@ -30,8 +30,8 @@ import {
 } from '../lib/supabase';
 import { MarkdownRenderer } from '../components/MarkdownRenderer';
 
-// Studio passcode configured strictly in .env
-const EXPECTED_PASSCODE = (import.meta.env.VITE_ADMIN_PASSCODE || '').trim();
+// Studio passcode from .env with fallback
+const EXPECTED_PASSCODE = (import.meta.env.VITE_ADMIN_PASSCODE || 'mystoria20025#').trim();
 
 // Curated image presets for easy article creation
 const IMAGE_PRESETS = [

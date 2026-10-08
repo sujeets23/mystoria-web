@@ -2,9 +2,11 @@ import { createClient, SupabaseClient } from '@supabase/supabase-js';
 import type { Article, ArticleInput } from '../types/blog';
 import { initialArticles } from '../data/blogArticles';
 
-// Read environment variables
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || '';
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
+// Read environment variables with project defaults
+const supabaseUrl =
+  import.meta.env.VITE_SUPABASE_URL || 'https://kxirmcntprbtjpfvsncn.supabase.co';
+const supabaseAnonKey =
+  import.meta.env.VITE_SUPABASE_ANON_KEY || 'sb_publishable_H8wWeI22OcS181NFmbvvrA_4kHyrrlJ';
 
 // Check if valid Supabase configuration is supplied
 export const isSupabaseConfigured = (): boolean => {
