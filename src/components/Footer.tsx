@@ -82,6 +82,7 @@ export const Footer: React.FC = () => {
               {[
                 { name: 'Work', path: '/work' },
                 { name: 'Services', path: '/services' },
+                { name: 'Articles', path: '/blog' },
                 { name: 'About', path: '/about' },
                 { name: 'Contact', path: '/contact' },
               ].map((item) => (
@@ -148,7 +149,15 @@ export const Footer: React.FC = () => {
           </div>
 
           <div className="text-center text-neutral-400">
-            Designed &amp; developed in Mumbai, India.
+            Designed &amp; developed by{' '}
+            <a
+              href="https://www.dotlab.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-crimson underline underline-offset-4 decoration-white/20 hover:decoration-crimson transition-colors"
+            >
+              Dot labs
+            </a>
           </div>
 
           <button
