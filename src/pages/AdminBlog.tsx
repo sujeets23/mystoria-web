@@ -30,8 +30,8 @@ import {
 } from '../lib/supabase';
 import { MarkdownRenderer } from '../components/MarkdownRenderer';
 
-// Default passcode from .env or fallback
-const EXPECTED_PASSCODE = import.meta.env.VITE_ADMIN_PASSCODE || 'mystoria2026';
+// Studio passcode configured strictly in .env
+const EXPECTED_PASSCODE = (import.meta.env.VITE_ADMIN_PASSCODE || '').trim();
 
 // Curated image presets for easy article creation
 const IMAGE_PRESETS = [
@@ -110,6 +110,10 @@ export const AdminBlog: React.FC = () => {
   // Auth Handler
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
+    if (!EXPECTED_PASSCODE) {
+      setAuthError('VITE_ADMIN_PASSCODE is not defined in .env.');
+      return;
+    }
     if (passcode.trim() === EXPECTED_PASSCODE) {
       setIsAuthenticated(true);
       sessionStorage.setItem('mystoria_admin_session', 'active');
@@ -398,7 +402,7 @@ CREATE POLICY "Anon full access for simple admin"
                   type="password"
                   value={passcode}
                   onChange={(e) => setPasscode(e.target.value)}
-                  placeholder="Enter passcode (default: mystoria2026)"
+                  placeholder="Enter studio passcode"
                   autoFocus
                   className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/10 text-white placeholder-neutral-600 text-sm focus:outline-none focus:border-crimson/80 focus:ring-1 focus:ring-crimson font-mono transition-all"
                 />
@@ -412,12 +416,6 @@ CREATE POLICY "Anon full access for simple admin"
                 <span>AUTHENTICATE &amp; ENTER</span>
               </button>
             </form>
-
-            <div className="mt-8 pt-6 border-t border-white/[0.06] text-center">
-              <span className="text-[11px] font-mono text-neutral-500">
-                Default dev key: <code className="text-neutral-300">mystoria2026</code>
-              </span>
-            </div>
           </div>
         </div>
       </main>
